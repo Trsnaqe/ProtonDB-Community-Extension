@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Protondb Community Extension</title>
+  </head>
+  <body>
+    <h1 style="text-align: center;">Solidet's ProtonDB Extension</h1>
+    <p style="text-align: center;">Choose Colors for the Ratings:</p>
+    <div style="display: flex; width: 20rem; justify-content: center; align-items: center; flex-wrap: wrap;">
+      <div style="flex-basis: calc(50% - 1rem); margin: 0.5rem;">
+        <div style="margin-bottom: 0.5rem;">
+          <input type="color" id="platinum" name="platinum" value="#B4C7DC" />
+          <label for="platinum">Platinum</label>
+        </div>
+
+        <div style="margin-bottom: 0.5rem;">
+          <input type="color" id="gold" name="gold" value="#CFB53B" />
+          <label for="gold">Gold</label>
+        </div>
+
+        <div style="margin-bottom: 0.5rem;">
+          <input type="color" id="silver" name="silver" value="#A6A6A6"/>
+          <label for="silver">Silver</label>
+        </div>
+      </div>
+
+      <div style="flex-basis: calc(50% - 1rem); margin: 0.5rem;">
+        <div style="margin-bottom: 0.5rem;">
+          <input type="color" id="bronze" name="bronze" value="#CD7F32" />
+          <label for="bronze">Bronze</label>
+        </div>
+
+        <div style="margin-bottom: 0.5rem;">
+          <input type="color" id="borked" name="borked" value="#FF0000" />
+          <label for="borked">Borked</label>
+        </div>
+
+        <div style="margin-bottom: 0.5rem;">
+          <input type="color" id="unknown" name="unknown" value="#3D3D3D" />
+          <label for="unknown">Unknown</label>
+        </div>
+      </div>
+    </div>
+
+    <div style="display: flex; justify-content: center; margin-top: 1rem;">
+      <button id="resetColorsButton">Reset</button>
+    </div>
+
+    <script src="scripts/color.script.js"></script>
+  </body>
+</html>

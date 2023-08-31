@@ -1,0 +1,12 @@
+.protondb_rank_value {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.protondb_rank_rows {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 2.2rem;
+  margin-top: 5px;
+}
