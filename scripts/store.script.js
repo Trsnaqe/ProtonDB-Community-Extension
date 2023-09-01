@@ -1,14 +1,7 @@
-
-
-// Functions for handling items
-
-window.onload = function () {
-  const newItems = getNewItems();
-
-  // Add newly visited items to the set
+const newItems = getNewItems();
+if (newItems.length > 0) {
   newItems.forEach((item) => {
-    items.add(item);
+    addElementsToItems(item);
   });
-};
-
+}
 startObservers();

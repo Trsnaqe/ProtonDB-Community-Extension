@@ -100,7 +100,7 @@ function addLineToItem(item) {
     }
   );
 }
-function addIconToItem(item) {
+function addIconToItem(item, isItemInSearchBox = false) {
   if (shouldSkipAddingIcon(item)) {
     return;
   }
@@ -123,17 +123,19 @@ function addIconToItem(item) {
       }
       const icon = createIconElement(status, imageKey);
       const url = document.URL;
-      if (url.includes("https://store.steampowered.com/search/")) {
+      if (isItemInSearchBox) insertIconBeforeItem(icon, item);
+      else if (url.includes("https://store.steampowered.com/search/")) {
         insertIconInList(icon, item);
       } else insertIconBeforeItem(icon, item);
     }
   );
 }
 
-function addElementsToItems(item) {
+function addElementsToItems(item, isItemInSearchBox = false) {
   if (!item) return;
   addLineToItem(item);
-  addIconToItem(item);
+  addIconToItem(item, isItemInSearchBox);
+  items.add(item);
 }
 
 function getNewItems() {

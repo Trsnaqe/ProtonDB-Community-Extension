@@ -34,13 +34,13 @@ function createRankRow(rankTitle, rankValue, textColor) {
   return rankRow;
 }
 
-function createIconElement(status,iconUrl) {
+function createIconElement(status, iconUrl) {
   const icon = document.createElement("img");
   var imgURL = chrome.runtime.getURL(`assets/${iconUrl}.png`);
 
   icon.src = imgURL;
   icon.classList.add("deck-status-icon");
-  icon.setAttribute("data-ds-deck-tier",status );
+  icon.setAttribute("data-ds-deck-tier", status);
   return icon;
 }
 
@@ -60,16 +60,17 @@ function insertIconBeforeItem(icon, item) {
   item.prepend(icon);
 }
 
-function insertIconInList(icon, item){
-  const gameListing=item.querySelector(".responsive_search_name_combined")
-  const reviewBox=gameListing.querySelector(".col.search_reviewscore.responsive_secondrow")
-  makeItemRelative(reviewBox)
-  const review=reviewBox.querySelector(".search_review_summary")
-  icon.classList.add("on-list")
-  review.prepend(icon)
+function insertIconInList(icon, item) {
+  if (!item) return;
+  const gameListing = item.querySelector(".responsive_search_name_combined");
+  const reviewBox = gameListing.querySelector(
+    ".col.search_reviewscore.responsive_secondrow"
+  );
+  makeItemRelative(reviewBox);
+  const review = reviewBox.querySelector(".search_review_summary");
+  icon.classList.add("on-list");
+  if (review) review.prepend(icon);
 }
-
-
 
 function colorLineElement(line, color) {
   line.style.backgroundColor = color;
