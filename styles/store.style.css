@@ -11,7 +11,7 @@
     width: 4px;
     height: 100%;
     position: absolute;
-    z-index: 9999; /* Set a high z-index value */
+    z-index: 11; 
     left: 0;
   }
 

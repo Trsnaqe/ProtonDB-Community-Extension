@@ -6,39 +6,50 @@ function shouldSkipAddingLine(item) {
     return true;
   }
 
-  const classNamesToCheckInParent = [
-    "gutter_item",
-    "vertical-line",
-    "btnv6_blue_hoverfade",
-    "btn_small_tall",
-    "screenshot",
-    "home_content_reason",
-    "salepreviewwidgets_TitleCtn_1F4bc",
-    "blockbg",
-    "package_contents",
-    "steamdb_prices",
-    "glance_details",
-    "gameDlcBlocks",
-    "itad-pricing",
-    "game_area_description",
-    "similar_recent_apps_container",
-    "gamehover_TextContent_2ghgg",
+  const specificClassesToCheck = [
+    ...ClassNamesToCheck,
+    "animated_featured_capsule_Title_3vZJE",
   ];
-
-  const classNamesToCheck = [
-    "btnv6_blue_hoverfade",
-    "btn_small_tall",
-    "screenshot",
-    "gamehover_Midline_FsH84",
-    "discovery_queue_overlay"
-  ];
+  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent];
 
   if (
     item.matches(".gutter_item") ||
     item.querySelector(".vertical-line") ||
-    classNamesToCheck.some((className) => item.classList.contains(className)) ||
-    classNamesToCheckInParent.some((className) =>
-      parent.classList.contains(className)
+    specificClassesToCheck.some((className) =>
+      hasAnyClass(item, [className])
+    ) ||
+    specificClassesToCheckInParent.some((className) =>
+      hasAnyParentClass(item, [className])
+    )
+  ) {
+    return true;
+  }
+  if (shouldMakeItemRelative(item)) makeItemRelative(item);
+  return false;
+}
+
+function shouldSkipAddingIcon(item) {
+  if (!item) return true;
+  const parent = item?.parentNode ? item.parentNode : item;
+
+  if (parent?.tagName && parent.tagName === "P") {
+    return true;
+  }
+
+  const specificClassesToCheck = [
+    ...ClassNamesToCheck,
+    "animated_featured_capsule_Artwork_3UsQc",
+  ];
+  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent];
+
+  if (
+    item.matches(".gutter_item") ||
+    item.querySelector(".deck-status-icon") ||
+    specificClassesToCheck.some((className) =>
+      hasAnyClass(item, [className])
+    ) ||
+    specificClassesToCheckInParent.some((className) =>
+      hasAnyParentClass(item, [className])
     )
   ) {
     return true;
@@ -49,14 +60,9 @@ function shouldSkipAddingLine(item) {
 
 function shouldMakeItemRelative(item) {
   if (!item) return false;
-  const parent = item?.parentNode ? item.parentNode : item;
   if (item.style.position === "relative") return false;
 
-  const classNamesToCheck = ["Focusable"];
-
-  if (
-    classNamesToCheck.some((className) => item.classList.contains(className))
-  ) {
+  if (RelativeClassCheck.some((className) => hasAnyClass(item, [className]))) {
     return true;
   }
   return false;
@@ -95,7 +101,7 @@ function addLineToItem(item) {
   );
 }
 function addIconToItem(item) {
-  if (shouldSkipAddingLine(item)) {
+  if (shouldSkipAddingIcon(item)) {
     return;
   }
 
@@ -123,10 +129,22 @@ function addIconToItem(item) {
     }
   );
 }
+
+function addElementsToItems(item) {
+  if (!item) return;
+  addLineToItem(item);
+  addIconToItem(item);
+}
+
 function getNewItems() {
   return Array.from(
     document.querySelectorAll(
       'a[href^="https://store.steampowered.com/app/"]:not([class*="ReviewScore"]):not(a[class*="ReviewScore"]), a.home_marketing_message.small.app_impression_tracked'
     )
-  ).filter((item) => !items.has(item));
+  ).filter(
+    (item) =>
+      !items.has(item) &&
+      !hasAnyClass(item, ClassNamesToCheck) &&
+      !hasAnyParentClass(item, ClassNamesToCheckInParent)
+  );
 }

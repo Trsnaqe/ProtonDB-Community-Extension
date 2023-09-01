@@ -9,8 +9,7 @@ function handleContentMutation(mutationsList) {
           if (newItems.length > 0) {
             newItems.forEach((item) => {
               items.add(item);
-              addLineToItem(item);
-              addIconToItem(item);
+              addElementsToItems(item)
             });
           }
         }
@@ -66,8 +65,7 @@ const searchSuggestionsObserver = new MutationObserver((mutationsList) => {
             "a[href^='https://store.steampowered.com/app/']:not([class*='ReviewScore']):not(a[class*='ReviewScore']), a.home_marketing_message.small.app_impression_tracked"
           )
         ) {
-          addLineToItem(node);
-          addIconToItem(node);
+          addElementsToItems(node);
         }
       });
     }
