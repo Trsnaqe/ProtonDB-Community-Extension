@@ -100,7 +100,7 @@ function addLineToItem(item) {
     }
   );
 }
-function addIconToItem(item, isItemInSearchBox = false) {
+function addIconToItem(item, isItemInSearchBox) {
   if (shouldSkipAddingIcon(item)) {
     return;
   }
