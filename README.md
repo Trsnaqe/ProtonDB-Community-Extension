@@ -1,5 +1,3 @@
-
-
 <h1 align="center" size="7">ProtonDB Community Extension for Chrome and Firefox</h1>
 <p align="center">
   <b>Elevate Your Linux Gaming Experience with ProtonDB Community Extension</b>
@@ -10,7 +8,6 @@
 ## Overview
 
 The ProtonDB Community Extension for Chrome and Firefox is a powerful tool that enhances your gaming experience on Linux by integrating ProtonDB's compatibility data into Steam's interface. This extension provides an intuitive way to access game compatibility information right from the Steam store, search bar, and app pages. It highlights game tiers, shows deck verification status, offers adjustable line colors, and simplifies your decision-making process when it comes to playing Windows games on Linux through Proton.
-
 
 ## Features
 
@@ -88,9 +85,10 @@ We extend our gratitude to these individuals and projects for their contribution
 
 ## Contact
 
+> Developers: [_Fudayl Çavuş_](https://github.com/fudaylcavus) |
+ [_Trsnaqe_](https://github.com/Trsnaqe)
+
 Questions, support, or feedback? Reach out through these channels:
 
-- [LinkedIn](https://www.linkedin.com/in/sacit)
-- [Twitter](https://twitter.com/Trsnaqe)
-- Email: trsnaqe@gmail.com
+- Email: solidet@gmail.com
 - [Buy Me a Coffee](https://www.buymeacoffee.com/trsnaqe)

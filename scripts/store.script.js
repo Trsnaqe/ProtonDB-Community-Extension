@@ -7,7 +7,7 @@ window.onload = function () {
 
   // Add newly visited items to the set
   newItems.forEach((item) => {
-    item.add(item);
+    items.add(item);
   });
 };
 
