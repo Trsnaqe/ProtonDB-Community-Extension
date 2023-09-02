@@ -27,6 +27,9 @@ const ClassNamesToCheckInParent = [
   "game_area_description",
   "similar_recent_apps_container",
   "gamehover_TextContent_2ghgg",
+  "gameslistitems_GameNameContainer_w6q9p",
+  "blotter_gamepurchase_details",
+  "greenenvelope_NotificationsMenuEntriesContainer_1UQTO"
 ];
 
 const RelativeClassCheck = ["Focusable"];
