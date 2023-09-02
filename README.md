@@ -18,18 +18,30 @@ Enjoy the seamless integration of ProtonDB's compatibility data into Steam on bo
 ### **Tier Highlights**
 
 Quickly gauge a game's compatibility with Proton on Linux by viewing its tier on the Steam store page. These tiers, directly from ProtonDB, offer valuable insights at a glance.
+<p align="center">
+  <img src="https://i.imgur.com/SdUCDAO.png" alt="Tier Highlights Feature"/>
+</p>
 
 ### **Customizable Line Colors**
 
 Personalize your extension experience by adjusting the line colors for each compatibility tier. Enhance both information and aesthetics.
+<p align="center">
+  <img src="https://i.imgur.com/MKeW0j9.png" alt="Color Picker Feature"/>
+</p>
 
 ### **Search Bar Compatibility**
 
 Save time by accessing compatibility tiers directly in Steam search results. Make decisions without needing to navigate to individual game pages.
+<p align="center">
+  <img src="https://i.imgur.com/LFUvwoV.png" alt="Search Feature"/>
+</p>
 
 ### **App Page Integration**
 
 On a game's app page, the extension continues to provide valuable information. The compatibility tier and deck verification status is prominently showcased, aiding your decision-making process.
+<p align="center">
+  <img src="https://i.imgur.com/DRLiFzy.png" alt="App Page Feature"/>
+</p>
 
 ### **Dynamic Line Addition**
 
@@ -42,6 +54,39 @@ Tailor the extension's appearance in real time. Open the extension menu to adjus
 ### **Steam Deck Verification Indicator**
 
 Identify games verified for the Steam Deck handheld device. The indicator appears on both store pages and app pages, offering insight into optimized performance on the Steam Deck.
+<p align="center">
+  <img src="https://i.imgur.com/bGwXAsA.png" alt="Steam Deck Feature"/>
+</p>
+
+### **Compatibility with Other Steam Extensions**
+
+ProtonDB Community Extension seamlessly integrates with other Steam extensions, ensuring a smooth experience for power users.
+
+### **Available on Chrome and Firefox**
+
+Install the extension on your preferred browser, whether it's Chrome or Firefox, and enjoy the same great features on both platforms.
+
+### **Wide Compatibility**
+
+This extension supports almost every section of Steam where games are the main priority, providing a comprehensive experience for Linux gamers.
+<p align="center">
+  <img src="https://i.imgur.com/1HcVIrJ.png" alt="Wide Compatibility Feature"/>
+</p>
+
+## Screenshots
+
+<p align="center">
+  <img src="https://i.imgur.com/SdUCDAO.png" alt="Wide Compatibility Feature"/>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/blN3WZG.png" alt="Compatibility Feature"/>
+</p>
+
+<p align="center">
+  <img src="https://i.imgur.com/HB3Aqx7.png" alt="Wishlist Feature"/>
+</p>
+
 
 ## Installation
 
