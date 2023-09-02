@@ -20,7 +20,7 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://store.steampowered.com/*"],
+      "matches": ["https://store.steampowered.com/*", "https://steamcommunity.com/id/*/games/*"],
       "js": [
         "./utils/globals.js",
         "./utils/observers.js",
@@ -42,7 +42,7 @@
   "web_accessible_resources": [
     {
       "resources": ["assets/*"],
-      "matches": ["https://store.steampowered.com/*"],
+      "matches": ["https://store.steampowered.com/*", "https://steamcommunity.com/*"],
       "use_dynamic_url": true
     }
   ],
