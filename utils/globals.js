@@ -10,6 +10,7 @@ const ClassNamesToCheck = [
   "screenshot",
   "gamehover_Midline_FsH84",
   "discovery_queue_overlay",
+  "home_page_takeover_sizer"
 ];
 
 const ClassNamesToCheckInParent = [
@@ -29,7 +30,9 @@ const ClassNamesToCheckInParent = [
   "gamehover_TextContent_2ghgg",
   "gameslistitems_GameNameContainer_w6q9p",
   "blotter_gamepurchase_details",
-  "greenenvelope_NotificationsMenuEntriesContainer_1UQTO"
+  "greenenvelope_NotificationsMenuEntriesContainer_1UQTO",
+  "salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
+  "fullscreen-bg"
 ];
 
 const RelativeClassCheck = ["Focusable"];
