@@ -31,8 +31,10 @@ const ClassNamesToCheckInParent = [
   "gameslistitems_GameNameContainer_w6q9p",
   "blotter_gamepurchase_details",
   "greenenvelope_NotificationsMenuEntriesContainer_1UQTO",
-  "salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
-  "fullscreen-bg"
+  "fullscreen-bg",
+  "notice_box_content_blue_box"
 ];
 
 const RelativeClassCheck = ["Focusable"];
+
+const ParentRelativeClassCheck = ["salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O"];

@@ -75,11 +75,14 @@ function colorLineElement(line, color) {
 }
 
 function insertIconInTabList(icon, item) {
-    // tab_item_details
+    var insertMethod="beforebegin";
+    if(item.classList.contains("tab_item_overlay")){
+        insertMethod="afterend";
+        item=item.parentNode}
     const details = item.querySelector(".tab_item_details");
     if (!details) return false;
 
     icon.classList.add("on-tab-list");
 
-    details.children[details.children.length - 1].insertAdjacentElement("beforebegin", icon);
+    details.children[details.children.length - 1].insertAdjacentElement(insertMethod, icon);
 }
