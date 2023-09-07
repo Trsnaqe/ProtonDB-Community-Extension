@@ -80,3 +80,13 @@ body {
   color: inherit;
   cursor: pointer;
 }
+
+.version-text {
+  top: 0.7rem;
+  right: 0.7rem;
+  position: absolute;
+  font-size: 0.8rem;
+  margin-top: 8px;
+  color: #858592;
+  float: right;
+}
