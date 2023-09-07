@@ -75,9 +75,8 @@ body {
   margin-top: 24px;
 }
 
-.solidet-linktree  {
-    text-decoration: none;
-    color: inherit; 
-    cursor: pointer; 
-  
+.solidet-linktree {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
