@@ -92,7 +92,7 @@ This extension supports almost every section of Steam where games are the main p
 
 ### **Chrome**
 
-1. Visit the Extension Page [Chrome Web Store](https://chrome.google.com/webstore/detail/protondb-for-steam/ngonfifpkpeefnhelnfdkficaiihklid).
+1. Visit the Extension Page [Chrome Web Store](https://chrome.google.com/webstore/detail/protondb-community-extens/flogbofkijlempmliclhnmcfcfknpdia?hl=tr&authuser=0).
 2. Click "Add to Chrome" to install.
 
 ### **Firefox**
