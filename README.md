@@ -92,12 +92,12 @@ This extension supports almost every section of Steam where games are the main p
 
 ### **Chrome**
 
-1. Visit the Extension Page [Chrome Web Store](https://chrome.google.com/webstore/detail/protondb-for-steam/ngonfifpkpeefnhelnfdkficaiihklid)).
+1. Visit the Extension Page [Chrome Web Store](https://chrome.google.com/webstore/detail/protondb-for-steam/ngonfifpkpeefnhelnfdkficaiihklid).
 3. Click "Add to Chrome" to install.
 
 ### **Firefox**
 
-1. Visit the Extension Page [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/protondb-community-extension/)).
+1. Visit the Extension Page [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/protondb-community-extension/).
 3. Click "Add to Firefox" to install.
 
 
@@ -106,12 +106,12 @@ This extension supports almost every section of Steam where games are the main p
  ### **Chrome and Other Chromium Based Browsers**
 
 1. Download the Latest Chrome Release From [Releases](https://github.com/Trsnaqe/ProtonDB-Community-Extension/releases)
-2. Go to the extensions page: chrome://extensions
+2. Go to the extensions page: ```chrome://extensions```
 3. Drop the Zip file
 
 ### **Firefox**
 1. Download the Latest Firefox Release From [Releases](https://github.com/Trsnaqe/ProtonDB-Community-Extension/releases)
-2.  Go to the following url: about:debugging
+2.  Go to the following url: ```about:debugging```
 3. Click on This Firefox and Click on Load Temporary Extension
 4. Load the Extension and Grant the Permissions From 'Manage Extension' Tab.
 
