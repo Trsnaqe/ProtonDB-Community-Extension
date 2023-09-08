@@ -93,12 +93,13 @@ This extension supports almost every section of Steam where games are the main p
 ### **Chrome**
 
 1. Visit the Extension Page [Chrome Web Store](https://chrome.google.com/webstore/detail/protondb-for-steam/ngonfifpkpeefnhelnfdkficaiihklid).
-3. Click "Add to Chrome" to install.
+2. Click "Add to Chrome" to install.
 
 ### **Firefox**
 
 1. Visit the Extension Page [Firefox Add-ons](https://addons.mozilla.org/en-US/firefox/addon/protondb-community-extension/).
-3. Click "Add to Firefox" to install.
+2. Click "Add to Firefox" to install.
+3. 4. Load the Extension and Grant the Permissions From 'Manage Extension' Tab. (If vertical lines doesn't have color)
 
 
  ## Installing Manually
