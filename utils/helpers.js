@@ -59,3 +59,4 @@ function hasAnyParentClass(element, classNames) {
   }
   return false;
 }
+

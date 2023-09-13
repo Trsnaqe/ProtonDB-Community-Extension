@@ -8,5 +8,9 @@
   flex-direction: column;
   justify-content: space-between;
   height: 2.2rem;
-  margin-top: 5px;
+  margin-top: 10px;
+}
+.protondb_isNative_value{
+  font-size: 18px;
+  margin-left: 9px;
 }

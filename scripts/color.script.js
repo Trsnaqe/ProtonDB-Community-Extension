@@ -65,7 +65,6 @@ colorPickers.forEach((colorPicker) => {
     const colorPickerInput = colorPicker.querySelector("input");
 
     colorPicker.addEventListener("click", (event) => {
-        console.log(colorPickerInput);
         colorPickerInput.click();
     });
 

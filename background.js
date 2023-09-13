@@ -37,7 +37,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
     return true; // Keep the message channel open
   } else if (request.contentScriptQuery == "queryDeckStats") {
     var url = `https://store.steampowered.com/saleaction/ajaxgetdeckappcompatibilityreport?nAppID=${request.appId}`;
-    
+
     fetch(url)
       .then((response) => {
         if (!response.ok) {
@@ -51,7 +51,7 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
           throw new Error(`Error! No game found, success: ${data.success}`);
         }
         let icon;
-        const category=data.results.resolved_category;
+        const category = data.results.resolved_category;
         switch (category) {
           case 0:
             status = "unknown";
@@ -74,9 +74,32 @@ chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
         }
         const deckInfo = {
           status: status,
-          icon: icon
+          icon: icon,
         };
         sendResponse(deckInfo);
+      })
+      .catch((error) => {
+        sendResponse({ error: error.message }); // Send an error response if needed
+      });
+
+    return true; // Keep the message channel open
+  } else if (request.contentScriptQuery == "queryPlatforms") {
+    var url = `https://www.protondb.com/proxy/steam/api/appdetails/?appids=${request.appId}`;
+
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        return response.json();
+      })
+      .then((data) => {
+        let responseObject=data[request.appId]
+        let status = "";
+        if (!responseObject.success) {
+          throw new Error(`Error! No game found, success: ${data.success}`);
+        }
+        sendResponse(responseObject.data.platforms);
       })
       .catch((error) => {
         sendResponse({ error: error.message }); // Send an error response if needed

@@ -15,7 +15,7 @@ function createRankRow(rankTitle, rankValue, textColor) {
 
   const rankValueSpan = document.createElement("span");
   rankValueSpan.classList.add("protondb_rank_value");
-  rankValueSpan.textContent = rankValue;
+  rankValueSpan.textContent = rankValue || "N/A";
   rankValueSpan.style.color = colors[textColor] || colors.unknown;
   rankValueSpan.setAttribute("data-tier", rankValue);
 
@@ -32,6 +32,43 @@ function createRankRow(rankTitle, rankValue, textColor) {
   rankRow.append(subtitleDiv, summaryDiv);
 
   return rankRow;
+}
+function createPlatformRow(isNative) {
+  const platformRow = document.createElement("div");
+  platformRow.classList.add("user_reviews_summary_row");
+  const createDivWithClasses = (...classes) => {
+    const div = document.createElement("div");
+    div.classList.add(...classes);
+    return div;
+  };
+  const icon = isNative ? "✔" : "✘";
+  const subtitleDiv = createDivWithClasses("subtitle", "column");
+  subtitleDiv.textContent = "Native Linux Client?";
+
+  const summaryDiv = createDivWithClasses(
+    "summary",
+    "column",
+    "protondb_isNative"
+  );
+
+  const platformValueSpan = document.createElement("span");
+  platformValueSpan.classList.add("protondb_isNative_value");
+  platformValueSpan.textContent = icon;
+  platformValueSpan.style.color = "#67c1f5";
+  platformValueSpan.setAttribute("data-isNative", isNative);
+
+  const link = document.createElement("a");
+  link.href = `https://protondb.com/app/${getAppId()}`;
+  link.textContent = "(?)";
+
+  const rankTitleSpan = document.createElement("span");
+  rankTitleSpan.classList.add("responsive_reviewdesc_short");
+  rankTitleSpan.textContent = isNative ? "Yes" : "No";
+
+  summaryDiv.append(platformValueSpan, link, rankTitleSpan);
+
+  platformRow.append(subtitleDiv, summaryDiv);
+  return platformRow;
 }
 
 function createIconElement(status, iconUrl) {

@@ -10,7 +10,8 @@ const ClassNamesToCheck = [
   "screenshot",
   "gamehover_Midline_FsH84",
   "discovery_queue_overlay",
-  "home_page_takeover_sizer"
+  "home_page_takeover_sizer",
+  "eventbbcodeparser_Link_3I3zk"
 ];
 
 const ClassNamesToCheckInParent = [
@@ -36,7 +37,9 @@ const ClassNamesToCheckInParent = [
   "bundle_contents_preview_position",
   "game_area_purchase_game_dropdown_description",
   "cart_item_img",
-  "cart_item_desc"
+  "cart_item_desc",
+  "notice_box_content",
+  "salepreviewwidgets_PreviewItem_2-qCG"
 ];
 
 const RelativeClassCheck = ["Focusable"];
