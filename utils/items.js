@@ -158,7 +158,7 @@ function addElementsToItems(item, isItemInSearchBox = false) {
   items.add(item);
 }
 
-function getNewItems() {
+function getNewItems(node=document) {
   return Array.from(
     document.querySelectorAll(
       'a[href^="https://store.steampowered.com/app/"]:not([class*="ReviewScore"]):not(a[class*="ReviewScore"]), a.home_marketing_message.small.app_impression_tracked'

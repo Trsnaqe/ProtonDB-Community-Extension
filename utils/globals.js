@@ -11,7 +11,8 @@ const ClassNamesToCheck = [
   "gamehover_Midline_FsH84",
   "discovery_queue_overlay",
   "home_page_takeover_sizer",
-  "eventbbcodeparser_Link_3I3zk"
+  "eventbbcodeparser_Link_3I3zk",
+  "game_area_dlc_row"
 ];
 
 const ClassNamesToCheckInParent = [
