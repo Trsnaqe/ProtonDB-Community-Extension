@@ -12,7 +12,8 @@ const ClassNamesToCheck = [
   "discovery_queue_overlay",
   "home_page_takeover_sizer",
   "eventbbcodeparser_Link_3I3zk",
-  "game_area_dlc_row"
+  "game_area_dlc_row",
+  "broadcast_embeddable_PopOutVideoTitleText_27rIe"
 ];
 
 const ClassNamesToCheckInParent = [
@@ -40,9 +41,9 @@ const ClassNamesToCheckInParent = [
   "cart_item_img",
   "cart_item_desc",
   "notice_box_content",
-  "salepreviewwidgets_PreviewItem_2-qCG"
+  "salepreviewwidgets_PreviewItem_2-qCG",
 ];
 
-const RelativeClassCheck = ["Focusable"];
+const RelativeClassCheck = ["Focusable","sale_capsule with_microtrailer"];
 
 const ParentRelativeClassCheck = ["salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O"];

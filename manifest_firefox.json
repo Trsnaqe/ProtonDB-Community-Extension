@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ProtonDB Community Extension",
   "description": "Elevate Your Linux Gaming Experience with ProtonDB Community Extension!",
-  "version": "1.2.5",
+  "version": "1.2.6",
   "permissions": ["storage"],
   "icons": {
     "16": "icons/icon16.png",
@@ -24,7 +24,11 @@
   },
   "content_scripts": [
     {
-      "matches": ["https://store.steampowered.com/*", "https://steamcommunity.com/id/*/games/*", "https://steamcommunity.com/profiles/*/games/*"],
+      "matches": [
+        "https://store.steampowered.com/*",
+        "https://steamcommunity.com/id/*/games/*",
+        "https://steamcommunity.com/profiles/*/games/*"
+      ],
       "exclude_matches": [
         "*://store.steampowered.com/dynamicstore/*",
         "*://store.steampowered.com/login/*",
@@ -54,8 +58,14 @@
   "web_accessible_resources": [
     {
       "resources": ["assets/*"],
-      "matches": ["https://store.steampowered.com/*", "https://steamcommunity.com/*"]
+      "matches": [
+        "https://store.steampowered.com/*",
+        "https://steamcommunity.com/*"
+      ]
     }
   ],
-  "host_permissions": ["https://store.steampowered.com/*", "https://www.protondb.com/*"]
+  "host_permissions": [
+    "https://store.steampowered.com/*",
+    "https://www.protondb.com/*"
+  ]
 }
