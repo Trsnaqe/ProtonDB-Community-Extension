@@ -8,8 +8,8 @@ function shouldSkipAddingLine(item) {
 
   const specificClassesToCheck = [
     ...ClassNamesToCheck,
-    "animated_featured_capsule_Title_3vZJE",
-    "title",
+    ".animated_featured_capsule_Title_3vZJE",
+    ".title",
   ];
   const specificClassesToCheckInParent = [...ClassNamesToCheckInParent];
 
@@ -40,8 +40,8 @@ function shouldSkipAddingIcon(item) {
 
   const specificClassesToCheck = [
     ...ClassNamesToCheck,
-    "animated_featured_capsule_Artwork_3UsQc",
-    "capsule",
+    ".animated_featured_capsule_Artwork_3UsQc",
+    ".capsule",
   ];
   const specificClassesToCheckInParent = [...ClassNamesToCheckInParent];
 
