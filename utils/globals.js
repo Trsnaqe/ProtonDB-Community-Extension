@@ -48,8 +48,8 @@ const ClassNamesToCheckInParent = [
   ".salelabels_SectionTitleInnerCtn_2R3H5"
 ];
 
-const RelativeClassCheck = ["Focusable", "sale_capsule with_microtrailer"];
+const RelativeClassCheck = [".Focusable", ".sale_capsule with_microtrailer"];
 
 const ParentRelativeClassCheck = [
-  "salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
+  ".salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
 ];
