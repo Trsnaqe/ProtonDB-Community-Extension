@@ -44,19 +44,24 @@ function getLineColor(tier) {
 }
 
 function hasAnyClass(element, classNames) {
+  const elementClassName = element.className;
+
   for (const className of classNames) {
-    if (element.classList.contains(className)) {
+    if (elementClassName.includes(className)) {
       return true;
     }
   }
   return false;
 }
 
+
 function hasAnyParentClass(element, classNames) {
   let parent = element.parentElement;
-  if (hasAnyClass(parent, classNames)) {
-    return true;
+  for (const className of classNames) {
+    if (element.closest(className)) {
+    
+      return true;
+    }
   }
   return false;
 }
-

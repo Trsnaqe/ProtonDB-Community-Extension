@@ -8,20 +8,25 @@ function shouldSkipAddingLine(item) {
 
   const specificClassesToCheck = [
     ...ClassNamesToCheck,
-    "animated_featured_capsule_Title_3vZJE",
     "title",
+    "animated_featured_capsule_Title_3vZJE"
+    
+    
   ];
-  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent];
+  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent,
+  ".salepreviewwidgets_TitleCtn_1F4bc",
+  ".pageheader.curator_name"
+];
 
   if (
     item.matches(".gutter_item") ||
     item.querySelector(".vertical-line") ||
-    specificClassesToCheck.some((className) =>
-      hasAnyClass(item, [className])
-    ) ||
-    specificClassesToCheckInParent.some((className) =>
-      hasAnyParentClass(item, [className])
-    )
+    
+      hasAnyClass(item,specificClassesToCheck)
+    ||
+    
+      hasAnyParentClass(item, specificClassesToCheckInParent)
+    
   ) {
     return true;
   }
@@ -41,19 +46,19 @@ function shouldSkipAddingIcon(item) {
   const specificClassesToCheck = [
     ...ClassNamesToCheck,
     "animated_featured_capsule_Artwork_3UsQc",
-    "capsule",
+    "title"
   ];
-  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent];
+  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent, ".salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",".animated_featured_capsule_Artwork_3UsQc" ];
 
   if (
     item.matches(".gutter_item") ||
     item.querySelector(".deck-status-icon") ||
-    specificClassesToCheck.some((className) =>
-      hasAnyClass(item, [className])
-    ) ||
-    specificClassesToCheckInParent.some((className) =>
-      hasAnyParentClass(item, [className])
-    )
+
+      hasAnyClass(item, specificClassesToCheck)
+     ||
+   
+      hasAnyParentClass(item, specificClassesToCheckInParent)
+    
   ) {
     return true;
   }
@@ -65,13 +70,12 @@ function shouldMakeItemRelative(item) {
   if (!item) return false;
   if (item.style.position === "relative") return false;
 
-  if (RelativeClassCheck.some((className) => hasAnyClass(item, [className]))) {
+  if (hasAnyClass(item, RelativeClassCheck)) {
     makeItemRelative(item);
   }
   if (
-    ParentRelativeClassCheck.some((className) =>
-      hasAnyParentClass(item, [className])
-    )
+      hasAnyParentClass(item, ParentRelativeClassCheck)
+    
   ) {
     makeItemRelative(item.parentNode);
   }
