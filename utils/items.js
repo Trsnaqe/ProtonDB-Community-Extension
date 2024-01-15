@@ -6,26 +6,14 @@ function shouldSkipAddingLine(item) {
     return true;
   }
 
-  const specificClassesToCheck = [
-    ...ClassNamesToCheck,
-    "title",
-    "animated_featured_capsule_Title_3vZJE"
-    
-    
-  ];
-  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent,
-  ".salepreviewwidgets_TitleCtn_1F4bc",
-  ".pageheader.curator_name"
-];
-
   if (
     item.matches(".gutter_item") ||
     item.querySelector(".vertical-line") ||
     
-      hasAnyClass(item,specificClassesToCheck)
+      hasAnyClass(item,shouldSkipAddingLineGlobals.specificClassesToCheck)
     ||
     
-      hasAnyParentClass(item, specificClassesToCheckInParent)
+      hasAnyParentClass(item, shouldSkipAddingLineGlobals.specificClassesToCheckInParent)
     
   ) {
     return true;
@@ -43,21 +31,15 @@ function shouldSkipAddingIcon(item) {
     return true;
   }
 
-  const specificClassesToCheck = [
-    ...ClassNamesToCheck,
-    "animated_featured_capsule_Artwork_3UsQc",
-    "title"
-  ];
-  const specificClassesToCheckInParent = [...ClassNamesToCheckInParent, ".salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",".animated_featured_capsule_Artwork_3UsQc" ];
 
   if (
     item.matches(".gutter_item") ||
     item.querySelector(".deck-status-icon") ||
 
-      hasAnyClass(item, specificClassesToCheck)
+      hasAnyClass(item, shouldSkipAddingIconGlobals.specificClassesToCheck)
      ||
    
-      hasAnyParentClass(item, specificClassesToCheckInParent)
+      hasAnyParentClass(item, shouldSkipAddingIconGlobals.specificClassesToCheckInParent)
     
   ) {
     return true;

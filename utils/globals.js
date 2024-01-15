@@ -21,6 +21,7 @@ const ClassNamesToCheck = [
 ];
 
 const ClassNamesToCheckInParent = [
+  "#devnotes_expander",
   ".gutter_item",
   ".vertical-line",
   ".home_content_reason",
@@ -30,6 +31,7 @@ const ClassNamesToCheckInParent = [
   ".glance_details",
   ".gameDlcBlocks",
   ".itad-pricing",
+  ".discoveryqueuewizard_QueueButton_19cHb",
   ".game_area_description",
   ".similar_recent_apps_container",
   ".gamehover_TextContent_2ghgg",
@@ -47,6 +49,32 @@ const ClassNamesToCheckInParent = [
   ".dlcforyou_BaseGameCapsuleCtn_2-6Wb",
   ".salelabels_SectionTitleInnerCtn_2R3H5"
 ];
+
+const shouldSkipAddingLineGlobals = {
+  specificClassesToCheck: [
+    ...ClassNamesToCheck,
+    "title",
+    "animated_featured_capsule_Title_3vZJE"
+  ],
+  specificClassesToCheckInParent: [
+    ...ClassNamesToCheckInParent,
+    ".salepreviewwidgets_TitleCtn_1F4bc",
+    ".pageheader.curator_name"
+  ]
+};
+
+const shouldSkipAddingIconGlobals = {
+  specificClassesToCheck: [
+    ...ClassNamesToCheck,
+    "title",
+    "animated_featured_capsule_Title_3vZJE"
+  ],
+  specificClassesToCheckInParent: [
+    ...ClassNamesToCheckInParent,
+    ".salepreviewwidgets_TitleCtn_1F4bc",
+    ".pageheader.curator_name"
+  ]
+};
 
 const RelativeClassCheck = [".Focusable", ".sale_capsule with_microtrailer"];
 
