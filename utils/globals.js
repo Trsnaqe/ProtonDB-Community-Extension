@@ -9,7 +9,7 @@ const ClassNamesToCheck = [
   "btn_small_tall",
   "screenshot",
   "gamehover_Midline_FsH84",
-  ".discovery_queue_overlay",
+  "discovery_queue_overlay",
   "home_page_takeover_sizer",
   "eventbbcodeparser_Link_3I3zk",
   "game_area_dlc_row",
@@ -17,7 +17,8 @@ const ClassNamesToCheck = [
   "curator_details",
   "dlcforyou_BaseGameCapsuleCtn_2-6Wb",
   "recommendation_link",
-  "discovery_queue_overlay"
+  "discovery_queue_overlay",
+  "_3I3zkiwF6M2eVvWVHFacVj Link"
 ];
 
 const ClassNamesToCheckInParent = [
@@ -52,12 +53,12 @@ const ClassNamesToCheckInParent = [
 
 const shouldSkipAddingLineGlobals = {
   specificClassesToCheck: [
-    ...ClassNamesToCheck,
+    "btn_blue_steamui btn_medium noicon",
     "title",
     "animated_featured_capsule_Title_3vZJE"
   ],
   specificClassesToCheckInParent: [
-    ...ClassNamesToCheckInParent,
+    "._1F4bcsKc9FjeWQ2TX8CWDe",
     ".salepreviewwidgets_TitleCtn_1F4bc",
     ".pageheader.curator_name"
   ]
@@ -65,12 +66,15 @@ const shouldSkipAddingLineGlobals = {
 
 const shouldSkipAddingIconGlobals = {
   specificClassesToCheck: [
-    ...ClassNamesToCheck,
+    "btn_blue_steamui btn_medium noicon",
     "title",
     "animated_featured_capsule_Title_3vZJE"
   ],
   specificClassesToCheckInParent: [
-    ...ClassNamesToCheckInParent,
+    //".wishlist_row .capsule",
+    "._2ghggL_JRFiWirIPJQaknp",
+    "._2tBkjMIp5TeR9aXdd_Kj_",
+    "._2Va3O50Z5ksJJcpvj-JFDI",
     ".salepreviewwidgets_TitleCtn_1F4bc",
     ".pageheader.curator_name"
   ]
