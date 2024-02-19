@@ -18,11 +18,16 @@ const ClassNamesToCheck = [
   "dlcforyou_BaseGameCapsuleCtn_2-6Wb",
   "recommendation_link",
   "discovery_queue_overlay",
-  "_3I3zkiwF6M2eVvWVHFacVj Link"
+  "_3I3zkiwF6M2eVvWVHFacVj Link",
+  "hardware_steamdeck_banner ds_no_flags",
+  "top_promo ds_no_flags",
 ];
 
 const ClassNamesToCheckInParent = [
+  ".valveindex_purchase_grid",
+  ".valveindex_purchase_option",
   "#devnotes_expander",
+  "._27rIe5WB38Vl9FriykIcGw",
   ".gutter_item",
   ".vertical-line",
   ".home_content_reason",
@@ -48,27 +53,27 @@ const ClassNamesToCheckInParent = [
   ".notice_box_content",
   ".salepreviewwidgets_PreviewItem_2-qCG",
   ".dlcforyou_BaseGameCapsuleCtn_2-6Wb",
-  ".salelabels_SectionTitleInnerCtn_2R3H5"
+  ".salelabels_SectionTitleInnerCtn_2R3H5",
 ];
 
 const shouldSkipAddingLineGlobals = {
   specificClassesToCheck: [
     "btn_blue_steamui btn_medium noicon",
     "title",
-    "animated_featured_capsule_Title_3vZJE"
+    "animated_featured_capsule_Title_3vZJE",
   ],
   specificClassesToCheckInParent: [
     "._1F4bcsKc9FjeWQ2TX8CWDe",
     ".salepreviewwidgets_TitleCtn_1F4bc",
-    ".pageheader.curator_name"
-  ]
+    ".pageheader.curator_name",
+  ],
 };
 
 const shouldSkipAddingIconGlobals = {
   specificClassesToCheck: [
     "btn_blue_steamui btn_medium noicon",
     "title",
-    "animated_featured_capsule_Title_3vZJE"
+    "animated_featured_capsule_Title_3vZJE",
   ],
   specificClassesToCheckInParent: [
     //".wishlist_row .capsule",
@@ -76,13 +81,15 @@ const shouldSkipAddingIconGlobals = {
     "._2tBkjMIp5TeR9aXdd_Kj_",
     "._2Va3O50Z5ksJJcpvj-JFDI",
     ".salepreviewwidgets_TitleCtn_1F4bc",
-    ".pageheader.curator_name"
-  ]
+    ".pageheader.curator_name",
+    ".slideInner___2mfX9"
+  ],
 };
 
 const RelativeClassCheck = [".Focusable", ".sale_capsule with_microtrailer"];
 
 const ParentRelativeClassCheck = [
+  "._2Va3O50Z5ksJJcpvj-JFDI",
   ".salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
-  ".salepreviewwidgets_StoreSaleWidgetLibraryAssetExtendedTop_3z02e"
+  ".salepreviewwidgets_StoreSaleWidgetLibraryAssetExtendedTop_3z02e",
 ];
