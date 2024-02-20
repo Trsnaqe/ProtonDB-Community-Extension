@@ -24,6 +24,7 @@ const ClassNamesToCheck = [
 ];
 
 const ClassNamesToCheckInParent = [
+  ".hlvr_included_sidebar",
   ".valveindex_purchase_grid",
   ".valveindex_purchase_option",
   "#devnotes_expander",
