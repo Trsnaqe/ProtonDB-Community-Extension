@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "ProtonDB Community Extension",
   "description": "Elevate Your Linux Gaming Experience with ProtonDB Community Extension!",
-  "version": "1.3.41",
+  "version": "1.3.42",
   "permissions": ["storage"],
   "icons": {
     "16": "icons/icon16.png",
