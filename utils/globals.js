@@ -55,6 +55,10 @@ const ClassNamesToCheckInParent = [
   ".salepreviewwidgets_PreviewItem_2-qCG",
   ".dlcforyou_BaseGameCapsuleCtn_2-6Wb",
   ".salelabels_SectionTitleInnerCtn_2R3H5",
+  ".F6ZErKA1thjnDLX-w2o-X.hPrcqN8eXW6ZtBpSiC1_y.Panel.Focusable",
+  "._15zSJbZFA8ZVF6ELRaABA8._3xJahXPK_GC6L0g5-kWvyg.Panel.Focusable",
+  "._1R5gp3YRzJiMxymqi31PGm"
+  
 ];
 
 const shouldSkipAddingLineGlobals = {
@@ -67,6 +71,7 @@ const shouldSkipAddingLineGlobals = {
     "._1F4bcsKc9FjeWQ2TX8CWDe",
     ".salepreviewwidgets_TitleCtn_1F4bc",
     ".pageheader.curator_name",
+    "._3vZJEEyRC88Cn-jgEo0Guo"
   ],
 };
 
@@ -83,7 +88,7 @@ const shouldSkipAddingIconGlobals = {
     "._2Va3O50Z5ksJJcpvj-JFDI",
     ".salepreviewwidgets_TitleCtn_1F4bc",
     ".pageheader.curator_name",
-    ".slideInner___2mfX9"
+    "._3UsQcBdVeIMtcyhtJvEXTb"
   ],
 };
 
@@ -93,4 +98,5 @@ const ParentRelativeClassCheck = [
   "._2Va3O50Z5ksJJcpvj-JFDI",
   ".salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
   ".salepreviewwidgets_StoreSaleWidgetLibraryAssetExtendedTop_3z02e",
+  ".yW_j0xWpHbU537U49A8C9"
 ];

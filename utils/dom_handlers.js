@@ -74,7 +74,6 @@ function createPlatformRow(isNative) {
 function createIconElement(status, iconUrl) {
   const icon = document.createElement("img");
   var imgURL = chrome.runtime.getURL(`assets/${iconUrl}.png`);
-
   icon.src = imgURL;
   icon.classList.add("deck-status-icon");
   icon.setAttribute("data-ds-deck-tier", status);
