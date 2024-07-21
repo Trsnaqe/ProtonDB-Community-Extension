@@ -20,7 +20,7 @@
 .vertical-line {
   background-color: transparent; /* Set the background color to transparent */
   width: 4px;
-  height: -webkit-fill-available!important;
+  height: inherit;
   position: absolute;
   z-index: 11;
   left: 0;
