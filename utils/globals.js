@@ -4,99 +4,89 @@ const observers = [];
 const items = new Set();
 const colors = {};
 
+//css classes ought to change time to time, examples given for that to remember them.
+
+//to skip adding anything in parent
+const LIST_ITEM_TITLE = "._3rrH9dPdtHVRMzAEw82AId";
+const PAGE_TITLE = ".page_title_area.game_title_area.page_content";
+const BUNDLE_CONTENTS = ".bundle_contents_preview";
+const DLC_LIST = ".game_area_dlc_list";
+const HOVER_MODAL = "._2VvFLg2irh9gPAhhxE4Kpo"; //try to find games that are hoverable with purchase option
+const MINI_WIDGET_TITLE = "._9VjYX3CYMn2y-wWpAn00Y"; //check event page with stream
+const FLOATING_STREAM = "._28O6dX6-Xf37oViWRRhvjz"; //check event page with stream
+const PACKAGE_CONTENTS_CAPSULES = ".package_contents_capsules";
+const BASE_GAME_OF_DLC = ".glance_details";
+const GAME_AREA_DESCRIPTION = ".game_area_description";
+const RECOMMENDATION_LINK = ".recommendation_link"; //check franchise page
+const VALVE_INDEX = ".valveindex_purchase_grid";
+const VALVE_INDEX_ALYX_PROMO = ".hlvr_included_sidebar";
+const PURCHASE_NOTE = "#purchase_note"; //they sometimes put game hyperlink, eg: cod hq app
+const DISCOVERY_QUEUE = ".discovery_queue_static";
+const RECOMMENDED_GAME_REASON = ".home_content_reason"; //check game category
+
+//to skip add anything if <a> tag has one of those classes
+const RECOMMENDED_GAME_ON_STORE_BUTTON_HOVER = "btnv6_blue_hoverfade";
+const RECOMMENDED_GAME_ON_STORE_BUTTON_SMALL = "btn_small_tall";
+const SCREENSHOT = "screenshot";
+const SIMILIAR_APP = "similarapp"; //check game page when logged in and find similiar to games you have played
+
+//Relative Classes
+const PACKAGE_ITEM = ".bundle_package_item";
+const STORE_SALE_WIDGET_MINI = ".StoreSaleWidgetContainer_mini";
+const LARGE_GAME_ITEM = "._3DkfNrtTOLjNYd3yZliMzy"; //check ea play for this class
+const IMPRESSION_TRACKED_ELEMENT = ".ImpressionTrackedElement"; //login and go category page
+
+//banner game;
+//21/07/2024
+//we only need title for icon for aesthetic purposes but no icon on game cover art
+const BANNER_GAME_TITLE = "_26-ICqi8UhxutiYJyQ7jw"; //check game category, prevent adding icons on game title on the right side
+const BANNER_GAME_COVER_ART = "_3htJKARnLcsZPlG3Sqlvkg"; //check game category, prevent adding icons on game cover art
+
+
+//skip adding icons
+const HOVER_MODEL_BOTTOM_SECTION = "Xwe3c0LwQGRjmLBfrpFu6"; // hoverable games with purchase option
+
 const ClassNamesToCheck = [
-  "btnv6_blue_hoverfade",
-  "btn_small_tall",
-  "screenshot",
-  "gamehover_Midline_FsH84",
-  "discovery_queue_overlay",
-  "home_page_takeover_sizer",
-  "eventbbcodeparser_Link_3I3zk",
-  "game_area_dlc_row",
-  "broadcast_embeddable_PopOutVideoTitleText_27rIe",
-  "curator_details",
-  "dlcforyou_BaseGameCapsuleCtn_2-6Wb",
-  "recommendation_link",
-  "discovery_queue_overlay",
-  "_3I3zkiwF6M2eVvWVHFacVj Link",
-  "hardware_steamdeck_banner ds_no_flags",
-  "top_promo ds_no_flags",
+  RECOMMENDED_GAME_ON_STORE_BUTTON_HOVER,
+  RECOMMENDED_GAME_ON_STORE_BUTTON_SMALL,
+  SCREENSHOT,
+  SIMILIAR_APP
 ];
 
 const ClassNamesToCheckInParent = [
-  ".hlvr_included_sidebar",
-  ".valveindex_purchase_grid",
-  ".valveindex_purchase_option",
-  "#devnotes_expander",
-  "._27rIe5WB38Vl9FriykIcGw",
-  ".gutter_item",
-  ".vertical-line",
-  ".home_content_reason",
-  ".blockbg",
-  ".package_contents",
-  ".steamdb_prices",
-  ".glance_details",
-  ".gameDlcBlocks",
-  ".itad-pricing",
-  ".discoveryqueuewizard_QueueButton_19cHb",
-  ".game_area_description",
-  ".similar_recent_apps_container",
-  ".gamehover_TextContent_2ghgg",
-  ".gameslistitems_GameNameContainer_w6q9p",
-  ".blotter_gamepurchase_details",
-  ".greenenvelope_NotificationsMenuEntriesContainer_1UQTO",
-  ".fullscreen-bg",
-  ".notice_box_content_blue_box",
-  ".bundle_contents_preview_position",
-  ".game_area_purchase_game_dropdown_description",
-  ".cart_item_img",
-  ".cart_item_desc",
-  ".notice_box_content",
-  ".salepreviewwidgets_PreviewItem_2-qCG",
-  ".dlcforyou_BaseGameCapsuleCtn_2-6Wb",
-  ".salelabels_SectionTitleInnerCtn_2R3H5",
-  ".F6ZErKA1thjnDLX-w2o-X.hPrcqN8eXW6ZtBpSiC1_y.Panel.Focusable",
-  "._15zSJbZFA8ZVF6ELRaABA8._3xJahXPK_GC6L0g5-kWvyg.Panel.Focusable",
-  "._1R5gp3YRzJiMxymqi31PGm"
-  
+  LIST_ITEM_TITLE,
+  PAGE_TITLE,
+  BUNDLE_CONTENTS,
+  DLC_LIST,
+  HOVER_MODAL,
+  MINI_WIDGET_TITLE,
+  FLOATING_STREAM,
+  PACKAGE_CONTENTS_CAPSULES,
+  BASE_GAME_OF_DLC,
+  GAME_AREA_DESCRIPTION,
+  RECOMMENDATION_LINK,
+  VALVE_INDEX,
+  VALVE_INDEX_ALYX_PROMO,
+  PURCHASE_NOTE,
+  DISCOVERY_QUEUE,
+  RECOMMENDED_GAME_REASON
 ];
 
 const shouldSkipAddingLineGlobals = {
-  specificClassesToCheck: [
-    "btn_blue_steamui btn_medium noicon",
-    "title",
-    "animated_featured_capsule_Title_3vZJE",
-  ],
-  specificClassesToCheckInParent: [
-    "._1F4bcsKc9FjeWQ2TX8CWDe",
-    ".salepreviewwidgets_TitleCtn_1F4bc",
-    ".pageheader.curator_name",
-    "._3vZJEEyRC88Cn-jgEo0Guo"
-  ],
+  specificClassesToCheck: [BANNER_GAME_TITLE],
+  specificClassesToCheckInParent: [],
 };
 
 const shouldSkipAddingIconGlobals = {
-  specificClassesToCheck: [
-    "btn_blue_steamui btn_medium noicon",
-    "title",
-    "animated_featured_capsule_Title_3vZJE",
-  ],
-  specificClassesToCheckInParent: [
-    //".wishlist_row .capsule",
-    "._2ghggL_JRFiWirIPJQaknp",
-    "._2tBkjMIp5TeR9aXdd_Kj_",
-    "._2Va3O50Z5ksJJcpvj-JFDI",
-    ".salepreviewwidgets_TitleCtn_1F4bc",
-    ".pageheader.curator_name",
-    "._3UsQcBdVeIMtcyhtJvEXTb"
-  ],
+  specificClassesToCheck: [BANNER_GAME_COVER_ART, HOVER_MODEL_BOTTOM_SECTION],
+  specificClassesToCheckInParent: [],
 };
 
-const RelativeClassCheck = [".Focusable", ".sale_capsule with_microtrailer"];
+const RelativeClassCheck = [];
 
 const ParentRelativeClassCheck = [
-  "._2Va3O50Z5ksJJcpvj-JFDI",
-  ".salepreviewwidgets_StoreSaleWidgetHalfLeft_2Va3O",
-  ".salepreviewwidgets_StoreSaleWidgetLibraryAssetExtendedTop_3z02e",
-  ".yW_j0xWpHbU537U49A8C9"
+  PACKAGE_ITEM,
+  STORE_SALE_WIDGET_MINI,
+  LARGE_GAME_ITEM,
+  IMPRESSION_TRACKED_ELEMENT,
 ];

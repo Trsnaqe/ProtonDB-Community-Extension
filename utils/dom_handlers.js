@@ -43,7 +43,7 @@ function createPlatformRow(isNative) {
   };
   const icon = isNative ? "✔" : "✘";
   const subtitleDiv = createDivWithClasses("subtitle", "column");
-  subtitleDiv.textContent = "Native Linux Client?";
+  subtitleDiv.textContent = "Native Linux?";
 
   const summaryDiv = createDivWithClasses(
     "summary",
