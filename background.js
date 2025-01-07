@@ -1,4 +1,7 @@
-chrome.runtime.onMessage.addListener(function (request, sender, sendResponse) {
+// Browser API compatibility
+const browserAPI = typeof browser !== 'undefined' ? browser : chrome;
+
+browserAPI.runtime.onMessage.addListener(function (request, sender, sendResponse) {
   if (request.contentScriptQuery == "queryGame") {
     var url = `https://www.protondb.com/api/v1/reports/summaries/${request.appId}.json`;
 

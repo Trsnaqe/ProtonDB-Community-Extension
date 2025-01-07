@@ -2,8 +2,10 @@
   "manifest_version": 3,
   "name": "ProtonDB Community Extension",
   "description": "Elevate Your Linux Gaming Experience with ProtonDB Community Extension!",
-  "version": "1.4",
-  "permissions": ["storage"],
+  "version": "1.4.21",
+  "permissions": [
+    "storage"
+  ],
   "icons": {
     "16": "icons/icon16.png",
     "32": "icons/icon32.png",
@@ -32,7 +34,6 @@
         "*://steamcommunity.com/login/*",
         "*://checkout.steampowered.com/*",
         "*://store.steampowered.com/charts/*"
-
       ],
       "js": [
         "./utils/globals.js",
@@ -42,20 +43,29 @@
         "./utils/dom_handlers.js",
         "./scripts/store.script.js"
       ],
-
-      "css": ["./styles/store.style.css"],
+      "css": [
+        "./styles/store.style.css"
+      ],
       "run_at": "document_idle"
     },
     {
-      "matches": ["https://store.steampowered.com/app/*"],
-      "js": ["./scripts/app_page.script.js"],
-      "css": ["./styles/app_page.style.css"],
+      "matches": [
+        "https://store.steampowered.com/app/*"
+      ],
+      "js": [
+        "./scripts/app_page.script.js"
+      ],
+      "css": [
+        "./styles/app_page.style.css"
+      ],
       "run_at": "document_idle"
     }
   ],
   "web_accessible_resources": [
     {
-      "resources": ["assets/*"],
+      "resources": [
+        "assets/*"
+      ],
       "matches": [
         "https://store.steampowered.com/*",
         "https://steamcommunity.com/*"

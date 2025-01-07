@@ -1,16 +1,38 @@
-.protondb_rank_value {
-  font-size: 14px;
-  font-weight: bold;
+.protondb_rank_rows {
+    margin: 10px 0;
+    font-size: 14px;
 }
 
-.protondb_rank_rows {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: 2.2rem;
-  margin-top: 10px;
+.protondb_rank_row {
+    display: flex;
+    align-items: center;
+    margin: 5px 0;
 }
-.protondb_isNative_value{
-  font-size: 18px;
-  margin-left: 9px;
+
+.protondb_rank_label {
+    margin-right: 10px;
+    color: #8f98a0;
 }
+
+.protondb_icon {
+    display: inline-block;
+    transform-origin: 0 0;
+    transform: scale(0.8);
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.protondb_rank_value {
+    font-weight: bold;
+    color: #fff;
+    padding: 2px 8px;
+    border-radius: 3px;
+}
+
+/* Rank colors */
+.platinum { background-color: #b4c7dc; }
+.gold { background-color: #cfb53b; }
+.silver { background-color: #c0c0c0; }
+.bronze { background-color: #cd7f32; }
+.borked { background-color: #ff0000; }
+.pending { background-color: #666666; }

@@ -18,12 +18,29 @@
 }
 
 .vertical-line {
-  background-color: transparent; /* Set the background color to transparent */
+  background-color: transparent;
   width: 4px;
-  height: inherit;
+  height: 100%;
   position: absolute;
   z-index: 11;
   left: 0;
+  top: 0;
+  bottom: 0;
+}
+
+
+/* Specific styles for list view */
+.search_result_row .vertical-line {
+  height: 100%;
+  top: 0;
+  bottom: 0;
+}
+
+/* Specific styles for grid view */
+.store_capsule .vertical-line {
+  height: 100%;
+  top: 0;
+  bottom: 0;
 }
 
 .deck-status-icon.on-list {
